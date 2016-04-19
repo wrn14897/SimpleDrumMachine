@@ -5,9 +5,9 @@
   var Wads = {
     'KICK'    : {source: '/sounds/Kick.wav', notes:[]}, 
     'SNARE'   : {source: '/sounds/Snare.wav', notes:[]},
-    'TOM1'    : {source: '/sounds/Snare.wav', notes:[]},
-    'TOM2'    : {source: '/sounds/Snare.wav', notes:[]},
-    'TOM3'    : {source: '/sounds/Snare.wav', notes:[]},
+    'TOM1'    : {source: '/sounds/Tom1.wav', notes:[]},
+    'TOM2'    : {source: '/sounds/Tom2.wav', notes:[]},
+    'TOM3'    : {source: '/sounds/Tom3.wav', notes:[]},
     'HIHAT'   : {source: '/sounds/Hihat.wav', notes:[]},
     'CYMBAL'  : {source: '/sounds/Cymbal.wav', notes:[]}
   };    
@@ -64,8 +64,8 @@
         newSound.add(Wads[name].notes[section]);
       }
     });
-    newSound.play();  
     callback(true);
+    newSound.play();  
   };
 
   //Controller to control panel
@@ -77,7 +77,7 @@
     }
     var tracks = ctrlPanelModel.getTracks();
     var isPlaying = ctrlPanelModel.getPlayingStatus();
-    var tempoInMs  = (60000.0 / ctrlPanelModel.getTempo());
+    var tempoInMs  = (60000.0 / parseInt(ctrlPanelModel.getTempo()));
 
     if (isPlaying){
       playNotesAtSection(tracks, currentSection, function(isFinished){
@@ -85,7 +85,7 @@
           audioPlayerRenderView($body, currentSection);          
           currentSection += 1;
           ctrlPanelModel.setSection(currentSection);
-          //Continue playing..., set tempo here !!!
+          //Continue playing....
           setTimeout( function(){ audioPlayer.playNow($body); }, tempoInMs);
         }
       });

@@ -5,9 +5,15 @@
     var $panelNode   = $body.find("#panel");
     var $playbarNode = $body.find("#playbar");
     var $btmbarNode  = $body.find("#btmbar");
+    var $tempoNode   = $body.find("#show_tempo");
+    //Clear children nodes
     $panelNode.empty();
     $playbarNode.empty();
     $btmbarNode.find("div").empty();
+    $tempoNode.empty();
+    //Render top bar
+    $tempoNode.append("Tempo: " + ctrlPanelModel.getTempo() + " bpm");
+
     //Render tracks
     var tracks = ctrlPanelModel.getTracks();
     tracks.forEach(function(track){
@@ -68,6 +74,10 @@
     $body.find("#tempo").change(function(e){
       e.preventDefault();
       ctrlPanelModel.setTempo( parseInt($(this).val()) );
+      //Update view
+      var $tempoNode   = $body.find("#show_tempo");
+      $tempoNode.empty();
+      $tempoNode.append("Tempo: " + ctrlPanelModel.getTempo() + " bpm");
     });
     $body.find("#btmbar button").click(function(e){
       e.preventDefault();

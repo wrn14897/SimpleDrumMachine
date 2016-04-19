@@ -18,7 +18,7 @@
                   tag('input', {id:"notes", type:"range", min:"1", max:"4", value: parseInt(Math.log2(numOfNotes)), step:"1"}, [])]));
     btns.push(tag('button', {type:"submit", 
                              class:"w3-col w3-black w3-padding-hor-8", style:"width:20%;"}, [ 
-                  tag('input', {id:"tempo", type:"range", min:"50", max:"800", value:tempo, step:"10"}, [])]));
+                  tag('input', {id:"tempo", type:"range", min:"20", max:"400", value:tempo, step:"10"}, [])]));
     return btns;
   };
 
@@ -45,7 +45,7 @@
     var currColor = null;
     for (var i = 0; i < numOfNotes; i++){
       currColor = (Notes.readNote(i) === true ? color : "w3-black");
-      btns.push(tag('button', {class:"w3-col m1 w3-center note " + currColor, id: "note" + i.toString(),
+      btns.push(tag('button', {class:"w3-container w3-col m1 w3-center note " + currColor, id: "note" + i.toString(),
                                style:"width:" + portion.toString() + "%"}, []));
     }
     return tag('div',{id:name, class:"w3-col"},[ctrlPortion, tag('div', {class:"w3-rest"},btns)]);
