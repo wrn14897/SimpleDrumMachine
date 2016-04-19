@@ -1,0 +1,30 @@
+{
+  "name": "Wad",
+  "main": "wad.js",
+  "version": "2.3.1",
+  "homepage": "https://github.com/rserota/wad",
+  "authors": [
+    "raphael.serota@gmail.com"
+  ],
+  "description": "Wad is a Javascript library for manipulating audio using the new HTML5 Web Audio API. It greatly simplifies the process of creating, playing, and manipulating audio, either for real-time playback, or at scheduled intervals. Wad provides a simple interface to use many features one would find in a desktop DAW (digital audio workstation), but doesn't require the user to worry about sending XHR requests or setting up complex audio graphs.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "wad",
+    "Wad",
+    "web",
+    "audio"
+  ],
+  "license": "MIT",
+  "_release": "2.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.3.1",
+    "commit": "2da68d89f51d19da47252c06706b92c3f3058409"
+  },
+  "_source": "https://github.com/rserota/wad.git",
+  "_target": "~2.3.1",
+  "_originalSource": "wad",
+  "_direct": true
+}

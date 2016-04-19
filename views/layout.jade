@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel='stylesheet' href='/stylesheets/style.css')
+    link(rel="stylesheet" href="/sweetalert/dist/sweetalert.css")
+    link(rel="stylesheet" href="http://www.w3schools.com/lib/w3.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway")
+    link(rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css")
+  body(class="w3-light-grey")
+    block content
+    block scripts
+      script(src="/sweetalert/dist/sweetalert.min.js")
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js")
+
+      //Model
+      script(src="/javascripts/track.js")
+      script(src="/javascripts/notes.js")
+      script(src="/javascripts/ctrlPanel-model.js")
+      //View
+      script(src="/javascripts/ctrlPanel-view.js") 
+      //Wad
+      script(src="/Wad/build/wad.min.js")
+      script(src="/javascripts/templates.js")
+      script(src="/javascripts/audioPlayer.js")
+      
+      script(src="/javascripts/main.js")  
+     
+    
+ 
+    
+      
+
