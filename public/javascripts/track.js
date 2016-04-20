@@ -1,5 +1,8 @@
 (function(){
-  
+
+  //Track object represents a single row on the panel
+
+
   //properties = [status, name, color, volume, numOfnotes]
   function Track(properties){
     if (!Array.isArray(properties) || properties.length < 4){

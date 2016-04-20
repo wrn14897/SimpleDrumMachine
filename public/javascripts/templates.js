@@ -1,4 +1,6 @@
 (function(){
+  //Bunch of functions to render HTML objects 
+
 
   var Templates = {};
   Templates.renderPlayBar = function(numOfNotes, tempo){

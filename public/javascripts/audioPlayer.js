@@ -95,6 +95,7 @@
     ctrlPanelModel.setPlayingStatus(false);
   };
   audioPlayer.stopNow = function(){
+    //To remove section indicator
     ctrlPanelModel.setSection(-1);
     //set playing status
     ctrlPanelModel.setPlayingStatus(false);

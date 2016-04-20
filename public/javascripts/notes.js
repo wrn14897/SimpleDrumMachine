@@ -1,4 +1,8 @@
 (function(){
+  //Notes object used to represent a single note on the panel
+  //which contain the basic information for display
+
+
   function Notes(numOfNotes){
     if (typeof numOfNotes !== 'number'){
       throw "Error with notes properties!!";
